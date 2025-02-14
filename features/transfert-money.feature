@@ -8,3 +8,11 @@ Feature: Transfert d'argent entre comptes bancaires
         And le solde du compte B est de 700€
         And une confirmation de transaction est envoyée à l'utilisateur A
         And L'utilisateur B reçoit une notification de virement
+
+    Scenario: Echec du transfert en raison d'un solde insuffisant
+        Given un compte A avec un solde de 1000€
+        And un compte B avec un solde de 500€
+        When L'utilisateur A transfère 2000€ vers l'utilisateur B
+        Then Le solde du compte A est de 1000€
+        And le solde du compte B est de 500€
+        And L'utilisateur A reçoit une erreur "Solde insuffisant"
