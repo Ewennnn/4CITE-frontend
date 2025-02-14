@@ -1,6 +1,6 @@
 import './App.css';
-import Button from './Button.js'
-import UserList from './UserList.js'
+import Button from './components/button/Button.js'
+import UserList from './components/userList/UserList.js'
 
 function App() {
   const handleClick = () => {
