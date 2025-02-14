@@ -1,4 +1,5 @@
 import './App.css';
+import BankUser from './components/BankUser/BankUser.js';
 import Button from './components/button/Button.js'
 import UserForm from './components/userForm/userForm.js';
 import UserList from './components/userList/UserList.js'
@@ -25,6 +26,8 @@ function App() {
       <UserList users={userData}></UserList>
 
       <UserForm onSubmit={handleSubmit}/>
+
+      <BankUser username="Ewen"/>
     </>
   );
 }
