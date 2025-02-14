@@ -21,7 +21,7 @@ function App() {
   return (
     <>
       <h1>Start to learn React</h1>
-      <Button label="Click me !" onClick={handleClick}></Button>
+      <Button label="Click me !" onClick={handleClick} className="click-me-button"></Button>
 
       <UserList users={userData}></UserList>
 
