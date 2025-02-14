@@ -4,6 +4,7 @@ Feature: Transfert d'argent entre deux comptes avec conversion de devise
         Given un compte A avec un solde de 1000€
         And un compte B avec un solde de 500¥
         When l'utilisateur du compte A transfère 1€ vers le compte B
+        And le taux de conversion est affiché à l'utilisateur
         Then la transaction est acceptée
         And le solde du compte A est de 999€
         And le solde du compte B est de 660¥
@@ -14,6 +15,7 @@ Feature: Transfert d'argent entre deux comptes avec conversion de devise
         Given un compte A avec un solde de 1€
         And un compte B avec un solde de 1600¥
         When l'utilisateur du compte A transfère 2€ vers le compte B
+        And le taux de conversion est affiché à l'utilisateur
         Then La transaction est refusée
         And le solde du compte A est de 1€
         And le solde du compte B est de 1600¥
